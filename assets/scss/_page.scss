@@ -1,0 +1,53 @@
+/* GENERAL */
+
+body { background: white; font: $baseFont; }
+
+a, a:visited { color: $linkColor; }
+a:hover { color: $linkHoverColor; }
+
+/* HEADINGS / TYPOGRAPHY */
+h1, h2, h3, h4 { font-weight: normal; margin: 0 0 10px 0; }
+h1 { }
+h2 { }
+h3 { }
+h4.widgettitle { }
+
+/* STRUCTURE */
+#container { width: $pageWidth; margin: 20px auto; }
+
+/* HEADER */
+header { }
+#logo { }
+
+/* NAV */
+nav { }
+
+/* MAIN */
+#main { }
+
+/* SIDEBAR */
+aside { }
+
+/* FOOTER */
+footer { }
+
+/* PAGE TEMPLATES */
+/* Home Page */
+.home { }
+
+/* ARTICLES / BLOG POSTS */
+article { clear: both; margin: 0 0 35px 0; }
+
+blockquote { background: url(../img/icons/blockquote.png) no-repeat 0 12px; padding: 10px 20px 10px 50px; font-style: italic; }
+blockquote p { }
+
+ul, ol { }
+
+pre { }
+code, tt { }
+
+/* FORMS */
+
+form { }
+input[type=text] { }
+textarea { }
