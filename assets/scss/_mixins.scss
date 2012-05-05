@@ -1,5 +1,6 @@
 /*
  * Mixin for clearfix
+ * @include clearfix;
 */
 @mixin clearfix {
 	&:before, &:after { content: ""; display: table; }
@@ -9,6 +10,7 @@
 
 /*
  * Mixin for placeholder styling
+ * @include placeHolder(#333);
 */
 @mixin placeHolder($color) {
 	&::-webkit-input-placeholder { color:$color; }
@@ -17,6 +19,7 @@
 
 /*
  * Mixin for basic CSS triangles
+ * @include triangle(up, #000, 50px)
 */
 @mixin triangle($direction:up, $color:#000, $size:100px) {
 	@if($direction == up) {
@@ -28,10 +31,10 @@
 	}
 	@if($direction == down) {
 		border-color: $color transparent transparent transparent;
- 		border-style: solid;
-  		border-width: $size;
-  		height:0;
-  		width:0;
+		border-style: solid;
+		border-width: $size;
+		height:0;
+		width:0;
 	}
 	@if($direction == left) {
 		border-color: transparent $color transparent transparent;
@@ -42,15 +45,16 @@
 	}
 	@if($direction == right) {
 		border-color: transparent transparent transparent $color;
- 		border-style: solid;
-  		border-width: $size 0 $size $size;
-  		height:0;
-  		width:0;
+		border-style: solid;
+		border-width: $size 0 $size $size;
+		height:0;
+		width:0;
 	}
 }
 
 /*
  * Mixin for selection markup
+ * @include selection(hotpink, white);
 */
 @mixin selection($background, $color, $element:false) {
 	@if($element) {
@@ -68,8 +72,7 @@
  */
 @mixin boxShadow($x: 5px, $y: 5px, $blur: 10px, $spread: 10px, $color: #000) {	
 	-webkit-box-shadow: $x $y $blur $spread $color;
-	   -moz-box-shadow: $x $y $blur $spread $color;
-	        box-shadow: $x $y $blur $spread $color;
+			box-shadow: $x $y $blur $spread $color;
 }
 
 /*
@@ -78,8 +81,7 @@
  */
 @mixin insetBoxShadow($x: 5px, $y: 5px, $blur: 10px, $spread: 10px, $color: #000) {
 	-webkit-box-shadow: inset $x $y $blur $spread $color;
-       -moz-box-shadow: inset $x $y $blur $spread $color;
-	        box-shadow: inset $x $y $blur $spread $color;
+		box-shadow: inset $x $y $blur $spread $color;
 }
 
 /*
@@ -88,10 +90,8 @@
  */
 @mixin borderRadius($radius: 4px) {
 	-webkit-border-radius: $radius;
-	   -moz-border-radius: $radius;
-	    -ms-border-radius: $radius;
-   	     -o-border-radius: $radius;
 	        border-radius: $radius;
+	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 
 /*
@@ -101,8 +101,6 @@
 @mixin borderTopRadius($radius: 4px) {
 	-webkit-border-top-right-radius: $radius;
 	-webkit-border-top-left-radius: $radius;
-	-moz-border-radius-topright: $radius;
-	-moz-border-radius-topleft: $radius;
 	border-top-right-radius: $radius;
 	border-top-left-radius: $radius;
 }
@@ -114,8 +112,6 @@
 @mixin borderRightRadius($radius: 4px) {
 	-webkit-border-top-right-radius: $radius;
 	-webkit-border-bottom-right-radius: $radius;
-	-moz-border-radius-topright: $radius;
-	-moz-border-radius-bottomright: $radius;
 	border-top-right-radius: $radius;
 	border-bottom-right-radius: $radius;
 }
@@ -127,8 +123,6 @@
 @mixin borderBottomRadius($radius: 4px) {
 	-webkit-border-bottom-right-radius: $radius;
 	-webkit-border-bottom-left-radius: $radius;
-	-moz-border-radius-bottomright: $radius;
-	-moz-border-radius-bottomleft: $radius;
 	border-bottom-right-radius: $radius;
 	border-bottom-left-radius: $radius;
 }
@@ -140,8 +134,6 @@
 @mixin borderLeftRadius($radius: 4px) {
 	-webkit-border-top-left-radius: $radius;
 	-webkit-border-bottom-left-radius: $radius;
-	-moz-border-radius-topleft: $radius;
-	-moz-border-radius-bottomleft: $radius;
 	border-top-left-radius: $radius;
 	border-bottom-left-radius: $radius;
 }
@@ -176,11 +168,12 @@
  * @include boxRotate(10deg);
  */
 @mixin boxRotate($deg) {
-	-moz-transform: rotate($deg);
-	-o-transform: rotate($deg);
 	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
 	-ms-transform: rotate($deg);
+	-o-transform: rotate($deg);
 	transform: rotate($deg);
+	filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9914448613738104, M12=-0.13052619222005157,M21=0.13052619222005157, M22=0.9914448613738104, sizingMethod='auto expand');
 	zoom: 1;
 }
 
@@ -190,8 +183,8 @@
  * @include boxSizing(border-box);
  */
 @mixin boxSizing($sizing) {
-	-moz-box-sizing: $sizing;
 	-webkit-box-sizing: $sizing;
+	-moz-box-sizing: $sizing;
 	box-sizing: $sizing;
 }
 
@@ -200,10 +193,10 @@
  * @include setTransformOrigin(origin);
  */
 @mixin setTransformOrigin($origin) {
-	-moz-transform-origin:$origin;
-	-o-transform-origin:$origin;
 	-webkit-transform-origin:$origin;
+	-moz-transform-origin:$origin;
 	-ms-transform-origin:$origin;
+	-o-transform-origin:$origin;
 	transform-origin:$origin;
 }
 
@@ -247,8 +240,8 @@
 @mixin transitionDelay($delay) {
 	-webkit-transition-delay: $delay;
 	-moz-transition-delay: $delay;
-	-o-transition-delay: $delay;
 	-ms-transition-delay: $delay;
+	-o-transition-delay: $delay;
 	transition-delay: $delay;
 }
 
@@ -259,8 +252,8 @@
 @mixin transitionDuration($duration) {
 	-webkit-transition-duration: $duration;
 	-moz-transition-duration: $duration;
-	-o-transition-duration: $duration;
 	-ms-transition-duration: $duration;
+	-o-transition-duration: $duration;
 	transition-duration: $duration;
 }
 
@@ -284,8 +277,8 @@
 @mixin transitionTimingFunction($easing) {
 	-webkit-transition-timing-function: $easing;
 	-moz-transition-timing-function: $easing;
-	-o-transition-timing-function: $easing;
 	-ms-transition-timing-function: $easing;
+	-o-transition-timing-function: $easing;
 	transition-timing-function: $easing;
 }
 
@@ -296,16 +289,15 @@
 
 @mixin font-face($font-family, $font-url, $font-name) {
 	@font-face {
-		font-family:$font-family;
-		src:url($font-url + '/' + $font-name + '.eot');
-		src: url($font-url + '/' + $font-name + '.eot?#iefix') format('eot'),
-			 url($font-url + '/' + $font-name + '.woff') format('woff'),
-			 url($font-url + '/' + $font-name + '.ttf') format('truetype'),
-			 url($font-url + '/' + $font-name + '.svg#webfontBF9xh1gY') format('svg');
 		font: {
-			style:normal;
-			weight:normal;
+			family: $font-family;
+			style: normal;
+			weight: normal;
 		}
+		src: url($font-url + '/' + $font-name + '.eot') format('eot'), 
+			 url($font-url + '/' + $font-name + '.woff') format('woff'), 
+			 url($font-url + '/' + $font-name + '.ttf')  format('truetype'),
+			 url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');
 	}
 }
 
