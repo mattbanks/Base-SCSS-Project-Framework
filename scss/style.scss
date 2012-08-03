@@ -22,10 +22,8 @@
 @import "base";
 @import "mixins";
 
-// Compass imports
-@import "compass/css3";
-@import "compass/typography";
-@import "compass/utilities";
+// Compass import
+@import "compass";
 
 // Page and Site Styles
 @import "page";
