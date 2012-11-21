@@ -1,6 +1,6 @@
 # Base SCSS Starter Framework
 
-Version 1.1
+Version 1.5
 
 ## Contributors:
 
@@ -12,15 +12,34 @@ Base Compass/SCSS framework for new websites.
 
 ## Usage
 
-Code as you will. I use [CodeKit](http://incident57.com/codekit/) for Compass/SCSS compiling, but feel free to use whatever app or command line tool you prefer. [LiveReload](http://livereload.com/) is another great app on Mac for compiling SCSS.
+Code as you will. I use [CodeKit](http://incident57.com/codekit/) for Compass/SCSS compiling, but feel free to use whatever app or command line tool you prefer. [LiveReload](http://livereload.com/) and [Grunt](http://gruntjs.com/) are also great tools for compiling SCSS.
 
-- Compile `scss/style.scss` to `style.css`
+- Compile `scss/style.scss` to `css/style.css`
 - Compile `js/plugins.js` to `js/plugins.min.js`
-- Compile `js/jquery.functions.js` to `js/jquery.functions.min.js`
+- Compile `js/main.js` to `js/main.min.js`
 - ??
 - Profit
 
+### Features
+
+1. Normalized stylesheet for cross-browser compatibility using Normalize.css version 2 (IE8+ only)
+2. Easy to customize
+3. Flexible grid from [Chris Coyier](https://twitter.com/chriscoyier)
+4. Media Queries for mobile and tablets ready to populate
+5. Compass & SCSS with plenty of mixins ready to go
+
 ### Changelog
+
+#### Version 1.5
+
+* Updated to HTML5 Boilerplate 4
+* Updated to Normalize.css 2
+* Updated to Modernizr 2.6.2
+* Updated to jQuery 1.8.3
+* Renamed jquery.functions.js to main.js
+* Add flexible grid SCSS
+* Include @media bubbling mixins, [via Chris Coyier](http://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
+* Other bug fixes and changes
 
 #### Version 1.1
 
@@ -35,6 +54,9 @@ Code as you will. I use [CodeKit](http://incident57.com/codekit/) for Compass/SC
 
 ### Credits / Projects Utilized
 
-- [HTML5 Boilerplate](http://html5boilerplate.com) 3.0 Stripped (using [normalize.css](http://necolas.github.com/normalize.css))
-- [SCSS](http://sass-lang.com/)
-- [Compass](http://compass-style.org)
+* [HTML5 Boilerplate](http://html5boilerplate.com)
+* [Normalize.css](http://necolas.github.com/normalize.css))
+* [SASS/SCSS](http://sass-lang.com/)
+* [Compass](http://compass-style.org)
+* [Don't Overthink It Grids](css-tricks.com/dont-overthink-it-grids/)
+* [SCSS Media Query Mixins from Chris Coyier](http://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
