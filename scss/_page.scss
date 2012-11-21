@@ -1,5 +1,4 @@
 /* GENERAL */
-
 body { background: white; font: $baseFont; }
 
 a, a:visited { color: $linkColor; }
@@ -13,17 +12,17 @@ h3 { }
 h4.widgettitle { }
 
 /* STRUCTURE */
-#container { width: $pageWidth; margin: 20px auto; }
+.container { width: $pageWidth; margin: 20px auto; }
 
 /* HEADER */
 header { }
-#logo { }
+.logo { }
 
 /* NAV */
 nav { }
 
 /* MAIN */
-#main { }
+.main { }
 
 /* SIDEBAR */
 aside { }
@@ -31,7 +30,10 @@ aside { }
 /* FOOTER */
 footer { }
 
-/* PAGE TEMPLATES */
+/****************************************
+PAGE TEMPLATES
+*****************************************/
+
 /* Home Page */
 .home { }
 
@@ -45,9 +47,3 @@ ul, ol { }
 
 pre { }
 code, tt { }
-
-/* FORMS */
-
-form { }
-input[type=text] { }
-textarea { }
