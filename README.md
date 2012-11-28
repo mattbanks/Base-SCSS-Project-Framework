@@ -1,6 +1,6 @@
 # Base SCSS Starter Framework
 
-Version 1.5
+Version 1.5.1
 
 ## Contributors:
 
@@ -29,6 +29,11 @@ Code as you will. I use [CodeKit](http://incident57.com/codekit/) for Compass/SC
 5. Compass & SCSS with plenty of mixins ready to go
 
 ### Changelog
+
+#### Version 1.5.1
+
+* Move border-box from `_grid.scss` to `_global.scss`
+* Add border-box support for pseudo elements, because it makes the world a better place
 
 #### Version 1.5
 
