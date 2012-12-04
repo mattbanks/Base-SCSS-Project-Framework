@@ -1,6 +1,6 @@
 # Base SCSS Starter Framework
 
-Version 1.5.1
+Version 1.5.2
 
 ## Contributors:
 
@@ -29,6 +29,11 @@ Code as you will. I use [CodeKit](http://incident57.com/codekit/) for Compass/SC
 5. Compass & SCSS with plenty of mixins ready to go
 
 ### Changelog
+
+#### Version 1.5.2
+
+* Fixed broken html tag comment
+* Fixed broken modernizr link (`/js/vendor/` instead of `/js/lib/`)
 
 #### Version 1.5.1
 
