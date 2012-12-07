@@ -1,6 +1,6 @@
 # Base SCSS Starter Framework
 
-Version 1.5.2
+Version 1.5.3
 
 ## Contributors:
 
@@ -29,6 +29,10 @@ Code as you will. I use [CodeKit](http://incident57.com/codekit/) for Compass/SC
 5. Compass & SCSS with plenty of mixins ready to go
 
 ### Changelog
+
+#### Version 1.5.3
+
+* Fix text selection bg and color not pulling from variables
 
 #### Version 1.5.2
 
