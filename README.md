@@ -1,6 +1,6 @@
 # Base SCSS Starter Framework
 
-Version 1.5.3
+Version 1.5.4
 
 ## Contributors:
 
@@ -29,6 +29,10 @@ Code as you will. I use [CodeKit](http://incident57.com/codekit/) for Compass/SC
 5. Compass & SCSS with plenty of mixins ready to go
 
 ### Changelog
+
+#### Version 1.5.4
+
+* Add grid column sizes I typically use, general code cleanup
 
 #### Version 1.5.3
 
