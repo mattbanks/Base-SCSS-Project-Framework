@@ -1,24 +1,37 @@
 # Base SCSS Starter Framework
 
-Version 1.5.4
+Version 2.0.0
 
-## Contributors:
+## Author:
 
 Matt Banks ( [@mattbanks](http://twitter.com/mattbanks) / [kernelcreativemedia.com](http://www.kernelcreativemedia.com) / [mattbanks.me](http://www.mattbanks.me) )
 
 ## Summary
 
-Base Compass/SCSS framework for new websites.
+Base Compass/SCSS framework for new websites. Uses Compass/SCSS, HTML5 Boilerplate 4 with Modernizr and Normalize.css, and Grunt for all tasks.
 
 ## Usage
 
-Code as you will. I use [CodeKit](http://incident57.com/codekit/) for Compass/SCSS compiling, but feel free to use whatever app or command line tool you prefer. [LiveReload](http://livereload.com/) and [Grunt](http://gruntjs.com/) are also great tools for compiling SCSS.
+The theme is setup to use [Grunt](http://gruntjs.com/) to compile Compass/SCSS, lint, concatenate and minify JavaScript (with source maps), optimize images, and [LiveReload](http://livereload.com/) the browser (with extension), with flexibility to add any additional tasks via the Gruntfile. Alternatively, you can use [CodeKit](http://incident57.com/codekit/) or whatever else you prefer to compile the SCSS and manage the JavaScript.
 
-- Compile `scss/style.scss` to `css/style.css`
-- Compile `js/plugins.js` to `js/plugins.min.js`
-- Compile `js/main.js` to `js/main.min.js`
+Open the project directory in terminal and run `npm install` to pull in all Grunt dependencies. Run `grunt` to execute tasks. Code as you will. If you have the LiveReload browser extension, it will reload after any SCSS or JS changes. To optimize images, run `grunt imagemin`.
+
+- Compile `assets/scss/style.scss` to `style.css` (all paths defined in config.rb for Compass)
+- Compile `assets/scss/editor-style.scss` to `editor-style.css`
+- Concatenate and minify plugins in `assets/js/vender` and `assets/js/source/plugins.js` to `assets/js/plugins.min.js`
+- Minify `assets/js/source/main.js` to `assets/js/main.min.js`
 - ??
 - Profit
+
+To concatenate and minify your jQuery plugins, add them to the `assets/js/vendor` directory and add the `js` filename and path to the `Gruntfile` `uglify` task. Previous versions of the starter theme automatically pulled all plugins in the `vendor` directory, but this has changed to allow more granular control and for managing plugins and assets with bower.
+
+### Bower
+
+Supports [bower](https://github.com/bower/bower) to install and manage JavaScript dependencies in the `assets/js/vendor` folder.
+
+### Deployment
+
+The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/grunt-rsync). The Gruntfile includes setups for staging and production - edit your paths and host, then run `grunt rsync:staging` or `grunt rsync:production` to deploy your files via rsync.
 
 ### Features
 
@@ -29,6 +42,14 @@ Code as you will. I use [CodeKit](http://incident57.com/codekit/) for Compass/SC
 5. Compass & SCSS with plenty of mixins ready to go
 
 ### Changelog
+
+#### Version 2.0.0
+
+* reorganize code in `assets` folder for fonts, images, js and scss
+* setup Gruntfile to use Grunt for all compiling, concatenation and minification
+* add deployments via rsync
+* add bower support with `.bowerrc`
+* general code cleanup
 
 #### Version 1.5.4
 
@@ -74,7 +95,9 @@ Code as you will. I use [CodeKit](http://incident57.com/codekit/) for Compass/SC
 
 * [HTML5 Boilerplate](http://html5boilerplate.com)
 * [Normalize.css](http://necolas.github.com/normalize.css))
-* [SASS/SCSS](http://sass-lang.com/)
+* [SASS / SCSS](http://sass-lang.com/)
 * [Compass](http://compass-style.org)
 * [Don't Overthink It Grids](css-tricks.com/dont-overthink-it-grids/)
 * [SCSS Media Query Mixins from Chris Coyier](http://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
+* [Grunt](http://gruntjs.com/)
+* [Bower](https://github.com/bower/bower)
