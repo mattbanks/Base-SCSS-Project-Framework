@@ -1,6 +1,6 @@
 # Base SCSS Starter Framework
 
-Version 2.0.0
+Version 2.0.1
 
 ## Author:
 
@@ -41,7 +41,15 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 4. Media Queries for mobile and tablets ready to populate
 5. Compass & SCSS with plenty of mixins ready to go
 
+![dependencies](https://david-dm.org/mattbanks/Base-SCSS-Project-Framework.png)
+
 ### Changelog
+
+#### Version 2.0.1
+
+* update grunt dependencies
+* switch to load-grunt-tasks for loading everything
+* restructure deploy task based on grunt-rsync updates
 
 #### Version 2.0.0
 
