@@ -1,6 +1,6 @@
 # Base SCSS Starter Framework
 
-Version 2.0.2
+Version 2.0.3
 
 ## Author:
 
@@ -44,6 +44,11 @@ The theme includes deployments via [grunt-rsync](https://github.com/jedrichards/
 ![dependencies](https://david-dm.org/mattbanks/Base-SCSS-Project-Framework.png)
 
 ### Changelog
+
+#### Version 2.0.3
+
+* update grunt dependencies
+* update spacing in functions
 
 #### Version 2.0.2
 
